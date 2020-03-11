@@ -3,6 +3,11 @@ import Split from './composition/Split';
 import './App.css';
 import Tooltip from './composition/Tooltip';
 import Messages from './Messages';
+import TheDate from './state/TheDate';
+import Counter from './state/Counter/Counter'
+import HelloWorld from './state/state-drills/HelloWorld';
+import Bomb from './state/state-drills/Bomb';
+import RouletteGun from './state/state-drills/RouletteGun';
 
 // make 2 tooltips here and another inside the App directly
 const firstTooltip = (
@@ -31,6 +36,16 @@ function App() {
       </Split>
       <Messages name="Messages" unread={0}/>
       <Messages name="Notifications" unread={10}/>
+      <TheDate></TheDate> 
+      <Counter count={123}></Counter>
+      <div className='App'>
+                <h2>Hello World!</h2>
+                <HelloWorld />
+                <h2>Bomb</h2>
+                <Bomb />
+                <h2>RouletteGun</h2>
+                <RouletteGun />
+            </div>
     </main>
   )
 }
